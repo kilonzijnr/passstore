@@ -33,7 +33,7 @@ def save_user(self):
     """
     User.user_lst.append(self)
 
-    def remove_user(self):
+def delete_user (self):
 
         """
         remove_user removes User objects from user_lst
