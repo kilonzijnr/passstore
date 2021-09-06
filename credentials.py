@@ -33,11 +33,21 @@ def delete_credentials(self):
         credentials.credentials_list.remove(self)
 
 @classmethod
-
-def find_by_web_name(cls, web_name):
+def find_by_web_name(cls,web_name):
         """
         The function takes the web_name and returns credentials that match to it
         """
 for credential in cls.credentials_list:
     if credential.web_name == web_name:
        return credential
+
+@classmethod
+def list_credentials(cls, user_name):
+        """
+        This method returns the credentials array
+        """
+        user_credentials_list = []
+        for credential in cls.credentials_list:
+            if credential.user_name == user_name:
+                user_credentials_list.append(credential)
+        return user_credentials_list
