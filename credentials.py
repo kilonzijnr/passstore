@@ -38,3 +38,6 @@ def find_by_web_name(cls, web_name):
         """
         The function takes the web_name and returns credentials that match to it
         """
+for credential in cls.credentials_list:
+    if credential.web_name == web_name:
+       return credential
