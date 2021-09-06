@@ -27,3 +27,10 @@ def validate_user(user_name, password):
     """
     check_user = credentials.validate_user(user_name, password)
     return check_user
+
+def new_credentials(web_name, user_name, password):
+    """
+    Function for creating new credentials
+    """
+    new_credentials = credentials(web_name, user_name, password)
+    return new_credentials
