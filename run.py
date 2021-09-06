@@ -1,7 +1,7 @@
 from userlogin import User
-from credentials import credentials
+from credentials import Credentials
 
-def new_user(first_name, last_name, user_name, email, password):
+def new_User(first_name, last_name, user_name, email, password):
     """
     Function using the User class to build a new_user
     Args:
@@ -12,46 +12,46 @@ def new_user(first_name, last_name, user_name, email, password):
     password: user's new password for login access
     Returns: new_user
     """
-    new_user = User(first_name, last_name, user_name, email, password)
+    new_user=User(first_name, last_name, user_name, email, password)
     return new_user
 
-def save_user(User):
+def save_User(user):
     """
     Function saves the new user credentials for login
     """
-    User.save_user(User)
+    User.save_User(user)
 
-def validate_user(user_name, password):
+def validate_User(user_name, password):
     """
     Function to validate if user exists in user_lst
     """
-    check_user = credentials.validate_user(user_name, password)
-    return check_user
+    validate_User = Credentials.validate_User(user_name, password)
+    return validate_User
 
 def new_credentials(web_name, user_name, password):
     """
     Function for creating new credentials
     """
-    new_credentials = credentials(web_name, user_name, password)
+    new_credentials = Credentials(web_name, user_name, password)
     return new_credentials
 
 def save_credentials(credentials):
     """
     Function for saving new credentials input
     """
-    credentials.save_credentials(credentials)
+    Credentials.save_credentials(credentials)
 
 def list_credentials(User):
     """
     Function for listing credentials per user
     """
-    return credentials.list_credentials(User)
+    return Credentials.list_credentials(User)
 
 def password_creator():
     """
     Function calling the password_creator from the credentials file
     """
-    password = credentials.password_creator()
+    password = Credentials.password_creator()
     return password
 
 def run():
@@ -77,7 +77,7 @@ def run():
                     user_name = input("Input a username ==> ").strip()
                     email = input("Enter your email ==> ").strip()
                     password = input("Enter your a new password ==> ").strip()
-                    save_user(new_user(first_name, last_name, user_name, email, password))
+                    save_User(new_User(first_name, last_name, user_name, email, password))
                     print(" ")
                     print(
                         f"Account created succesfully!: \n First Name: {first_name} \n Surname: {last_name} \n Username: {user_name} \n Email: {email} \n Password: {password}"
@@ -93,7 +93,7 @@ def run():
                     print(" ")
                     user_name = input("Kindly input your username ==> ").strip()
                     password = str(input("Input your password ==> "))
-                    username = validate_user(user_name, password)
+                    username = validate_User(user_name, password)
                     if username == user_name:
                         print(" ")
                         print(
