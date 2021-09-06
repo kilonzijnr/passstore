@@ -54,3 +54,15 @@ def password_creator():
     password = credentials.password_creator()
     return password
 
+def run():
+    print(" ")
+    print("*")
+    print("HELLO, WELCOME TO Password Store")
+    print("*")
+    while True:
+        print(" ")
+        print("=")
+        print(" ")
+        print(
+            "Kindly use the options below to navigate through the app: \n 1 ==> Sign Up \n 2 ==> Log In \n 3 ==> Exit"
+        )
