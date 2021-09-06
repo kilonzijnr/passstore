@@ -40,8 +40,8 @@ A user should be able to:
 ## Running the Application
 * To run the application, in your terminal:
 
-        $ chmod +x main.py
-        $ ./main.py
+        $ chmod +x run.py
+        $ ./run.py
         
 ## Testing the Application
 * To run the tests for the class file:
