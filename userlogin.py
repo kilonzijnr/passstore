@@ -1,8 +1,4 @@
-from _typeshed import Self
-
-
 class User:
-
     """
  A Class that generates new user credentials
     """
@@ -22,10 +18,10 @@ def __init__(self, first_name, last_name, password, email):
             email : New user email address.
             """
 
-    Self.first_name = first_name
-    Self.last_name = last_name
-    Self.password = password
-    Self.email = email
+    self.first_name = first_name
+    self.last_name = last_name
+    self.password = password
+    self.email = email
 
 
 def save_User(self):
