@@ -34,3 +34,9 @@ def new_credentials(web_name, user_name, password):
     """
     new_credentials = credentials(web_name, user_name, password)
     return new_credentials
+
+def save_credentials(credentials):
+    """
+    Function for saving new credentials input
+    """
+    credentials.save_credentials(credentials)
