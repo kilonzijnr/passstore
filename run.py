@@ -40,3 +40,9 @@ def save_credentials(credentials):
     Function for saving new credentials input
     """
     credentials.save_credentials(credentials)
+
+def list_credentials(User):
+    """
+    Function for listing credentials per user
+    """
+    return credentials.list_credentials(User)
