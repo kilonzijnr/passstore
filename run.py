@@ -66,3 +66,25 @@ def run():
         print(
             "Kindly use the options below to navigate through the app: \n 1 ==> Sign Up \n 2 ==> Log In \n 3 ==> Exit"
         )
+choice = str(input("Enter option: "))
+        if choice == "1":
+            print("=")
+            print(" ")
+            print("Creating Account")
+            print(" ")
+            first_name = input("Input your first name ==> ").strip()
+            last_name = input("Enter your second name ==> ").strip()
+            user_name = input("Input a username ==> ").strip()
+            email = input("Enter your email ==> ").strip()
+            password = input("Enter your a new password ==> ").strip()
+            save_user(new_user(first_name, last_name, user_name, email, password))
+            print(" ")
+            print(
+                f"Account created succesfully!: \n First Name: {first_name} \n Surname: {last_name} \n Username: {user_name} \n Email: {email} \n Password: {password}"
+            )
+            print(" ")
+            print(
+                "Do not forget or disclose your password! Also note that your password is only accessible to you!"
+            )
+        elif choice == "2":
+            
