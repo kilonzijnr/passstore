@@ -99,4 +99,8 @@ choice = str(input("Enter option: "))
                 print(
                     f"Hey {user_name} !.\nKindly select an option to continue: "
                 )
-                
+                while True:
+                    print(" ")
+                    print(
+                        "Select an option: \n 1 ==> Save your new credentials \n 2 ==> Show saved credentials \n 3 ==> Return to main menu"
+                    )
