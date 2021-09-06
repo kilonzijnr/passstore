@@ -104,3 +104,15 @@ choice = str(input("Enter option: "))
                     print(
                         "Select an option: \n 1 ==> Save your new credentials \n 2 ==> Show saved credentials \n 3 ==> Return to main menu"
                     )
+                    option = input("Kindly input your option: ").strip()
+                    print(" ")
+                    if option == "1":
+                        print(" ")
+                        print("Input new credentials:")
+                        web_name = input(r"Enter the application's name ==> ").strip()
+                        user_name = input(r"Enter your application's account name ==> ")
+                        while True:
+                            print(" ")
+                            print(
+                                "Kindly select an option \n 1 ==> Auto-generate a password \n 2 ==> Create your own password \n 3 ==> Back"
+                            )
