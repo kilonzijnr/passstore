@@ -19,3 +19,9 @@ def __init__(self, web_name, user_name, password):
         self.web_name = web_name
         self.user_name = user_name
         self.password = password
+
+def save_credentials(self):
+        """
+        save_credentials saves new instances of credentials
+        """
+        credentials.credentials_list.append(self)
