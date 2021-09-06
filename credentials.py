@@ -51,3 +51,14 @@ def list_credentials(cls, user_name):
             if credential.user_name == user_name:
                 user_credentials_list.append(credential)
         return user_credentials_list
+
+@classmethod
+def validate_user(cls, user_name, password):
+        """
+        function to validate if user exists in user_lst
+        """
+        validated_user = ""
+        for user in User.user_list:
+            if user.user_name == user_name and user.password == password:
+                validated_user = user.user_name
+            return validated_user
