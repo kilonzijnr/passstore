@@ -87,4 +87,16 @@ choice = str(input("Enter option: "))
                 "Do not forget or disclose your password! Also note that your password is only accessible to you!"
             )
         elif choice == "2":
-            
+            print("=")
+            print(" ")
+            print("Kindly Log in to your Account")
+            print(" ")
+            user_name = input("Kindly input your username ==> ").strip()
+            password = str(input("Input your password ==> "))
+            username = validate_user(user_name, password)
+            if username == user_name:
+                print(" ")
+                print(
+                    f"Hey {user_name} !.\nKindly select an option to continue: "
+                )
+                
