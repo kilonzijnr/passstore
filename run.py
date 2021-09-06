@@ -67,7 +67,7 @@ def run():
             "Kindly use the options below to navigate through the app: \n 1 ==> Sign Up \n 2 ==> Log In \n 3 ==> Exit"
         )
 choice = str(input("Enter option: "))
-        if choice == "1":
+if choice == "1":
             print("=")
             print(" ")
             print("Creating Account")
@@ -86,7 +86,7 @@ choice = str(input("Enter option: "))
             print(
                 "Do not forget or disclose your password! Also note that your password is only accessible to you!"
             )
-        elif choice == "2":
+elif choice == "2":
             print("=")
             print(" ")
             print("Kindly Log in to your Account")
@@ -116,3 +116,49 @@ choice = str(input("Enter option: "))
                             print(
                                 "Kindly select an option \n 1 ==> Auto-generate a password \n 2 ==> Create your own password \n 3 ==> Back"
                             )
+                            choice = input("Select an option: ")
+                            print("=")
+                            if choice == "2":
+                                print(" ")
+                                password = input(
+                                    "Input your application's password: "
+                                ).strip()
+                                break
+                            elif choice == "1":
+                                password = password_creator()
+                                break
+                            elif choice == "3":
+                                break
+                            save_credentials(
+                            new_credentials(web_name, user_name, password)
+                        )
+                        print(" ")
+                        print(
+                            f"New credentials saved: \n Application/Website: {web_name} \n User Name: {user_name} \n User's Password: {password} "
+                        )
+                        print(" ")
+                    elif option == "2":
+                        print(" ")
+                        if list_credentials(user_name):
+                            print("Credentials:")
+                            print(" ")
+                            for credentials in list_credentials(user_name):
+                                print(
+                                    f"Application/Website: {credentials.web_name} \n User Name: {credentials.user_name} \n Password: {credentials.password}"
+                                )
+                            print(" ")
+                        else:
+                            print(
+                             "There are no credentials saved under you account. Kindly select option 1 to save current credentials"
+                            )
+                            print(
+                            "User not found!.Select option 1 to Create a new Account"
+                           )
+elif choice == "3":
+            print(" ")
+            print("Thankyou for using the app!")
+            break
+
+
+if __name__ == "__main__":
+    run()
