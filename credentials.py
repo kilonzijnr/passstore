@@ -32,3 +32,6 @@ def delete_credentials(self):
         """
         credentials.credentials_list.remove(self)
 
+@classmethod
+def find_by_web_name(cls, web_name):
+
