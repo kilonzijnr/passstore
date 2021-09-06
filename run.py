@@ -15,9 +15,15 @@ def new_user(first_name, last_name, user_name, email, password):
     new_user = User(first_name, last_name, user_name, email, password)
     return new_user
 
-def save_user(user):
+def save_user(User):
     """
     Function saves the new user credentials for login
     """
-    User.save_user(user)
+    User.save_user(User)
 
+def validate_user(user_name, password):
+    """
+    Function to validate if user exists in user_lst
+    """
+    check_user = credentials.validate_user(user_name, password)
+    return check_user
