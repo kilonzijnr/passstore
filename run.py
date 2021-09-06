@@ -46,3 +46,11 @@ def list_credentials(User):
     Function for listing credentials per user
     """
     return credentials.list_credentials(User)
+
+def password_creator():
+    """
+    Function calling the password_creator from the credentials file
+    """
+    password = credentials.password_creator()
+    return password
+
