@@ -45,9 +45,9 @@ def find_by_web_name(cls, web_name):
     """
 
 
-for credential in cls.credentials_list:
-    if credential.web_name == web_name:
-        return credential
+    for credential in cls.credentials_list:
+        if credential.web_name ==web_name:
+            return credential
 
 
 @classmethod
