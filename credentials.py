@@ -25,3 +25,10 @@ def save_credentials(self):
         save_credentials saves new instances of credentials in the list
         """
         credentials.credentials_list.append(self)
+
+def delete_credentials(self):
+        """
+        delete_credentials removes existing instances of credentials
+        """
+        credentials.credentials_list.remove(self)
+
