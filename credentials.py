@@ -22,6 +22,6 @@ def __init__(self, web_name, user_name, password):
 
 def save_credentials(self):
         """
-        save_credentials saves new instances of credentials
+        save_credentials saves new instances of credentials in the list
         """
         credentials.credentials_list.append(self)
