@@ -70,13 +70,13 @@ def run():
         if choice == "1":
                     print("=")
                     print(" ")
-                    print("Creating Account")
+                    print("Create an Account")
                     print(" ")
-                    first_name = input("Input your first name ==> ").strip()
-                    last_name = input("Enter your second name ==> ").strip()
-                    user_name = input("Input a username ==> ").strip()
-                    email = input("Enter your email ==> ").strip()
-                    password = input("Enter your a new password ==> ").strip()
+                    first_name = input("Input your first name >>> ").strip()
+                    last_name = input("Enter your second name >>> ").strip()
+                    user_name = input("Input a username >>> ").strip()
+                    email = input("Enter your email >>> ").strip()
+                    password = input("Enter your new password >>> ").strip()
                     save_User(new_User(first_name, last_name, user_name, email, password))
                     print(" ")
                     print(
@@ -84,15 +84,18 @@ def run():
                     )
                     print(" ")
                     print(
-                        "Do not forget or disclose your password! Also note that your password is only accessible to you!"
+                        " Kindly do not forget your login credentials!"
+                    )
+                    print(" ")
+                    print(
+                        "Now you can Login into your acount"
                     )
         elif choice == "2":
-                    print("=")
                     print(" ")
-                    print("Kindly Log in to your Account")
+                    print("Log in to your Account")
                     print(" ")
-                    user_name = input("Kindly input your username ==> ").strip()
-                    password = str(input("Input your password ==> "))
+                    username = input("Input your username >>> ").strip()
+                    password = str(input("Input your password >>> "))
                     username = validate_User(user_name, password)
                     if username == user_name:
                         print(" ")
@@ -104,7 +107,7 @@ def run():
                             print(
                                 "Select an option: \n 1 ==> Save your new credentials \n 2 ==> Show saved credentials \n 3 ==> Return to main menu"
                             )
-                            option = input("Kindly input your option: ").strip()
+                            option = input("Input your option: ").strip()
                             print(" ")
                             if option == "1":
                                 print(" ")
@@ -161,4 +164,4 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+     run()
