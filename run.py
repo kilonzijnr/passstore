@@ -57,18 +57,17 @@ def password_creator():
 def run():
     print(" ")
     print("*")
-    print("HELLO, WELCOME TO Password Store")
+    print("WELCOME TO PASSWORD STORE")
+    print("KEEPING YOUR CREDENTIALS IN YOUR FINGERTIPS!")
     print("*")
     while True:
-        print(" ")
-        print("=")
+
         print(" ")
         print(
-            "Kindly use the options below to navigate through the app: \n 1 ==> Sign Up \n 2 ==> Log In \n 3 ==> Exit"
+            "MAIN MENU: \n 1.>Sign Up \n 2.>Log In \n 3.>Exit"
         )
         choice = str(input("Enter option: "))
         if choice == "1":
-                    print("=")
                     print(" ")
                     print("Create an Account")
                     print(" ")
@@ -105,19 +104,19 @@ def run():
                         while True:
                             print(" ")
                             print(
-                                "Select an option: \n 1 ==> Save your new credentials \n 2 ==> Show saved credentials \n 3 ==> Return to main menu"
+                                "Select an option: \n 1.>Save your new credentials \n 2.>Show saved credentials \n 3.>Return to main menu"
                             )
                             option = input("Input your option: ").strip()
                             print(" ")
                             if option == "1":
                                 print(" ")
                                 print("Input new credentials:")
-                                web_name = input(r"Enter the application's name ==> ").strip()
-                                user_name = input(r"Enter your application's account name ==> ")
+                                web_name = input(r"Enter the application's name >>> ").strip()
+                                user_name = input(r"Enter your application's account name >>> ")
                                 while True:
                                     print(" ")
                                     print(
-                                        "Kindly select an option \n 1 ==> Auto-generate a password \n 2 ==> Create your own password \n 3 ==> Back"
+                                        "Kindly select an option \n 1.> Auto-generate a password \n 2.> Create your own password \n 3.>Back"
                                     )
                                     choice = input("Select an option: ")
                                     print("=")
