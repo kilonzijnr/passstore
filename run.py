@@ -28,20 +28,20 @@ def validate_User(user_name, password):
     validate_User = Credentials.validate_User(user_name, password)
     return validate_User
 
-def new_credentials(web_name, user_name, password):
+def new_Credentials(web_name, user_name, password):
     """
     Function for creating new credentials
     """
     new_credentials = Credentials(web_name, user_name, password)
     return new_credentials
 
-def save_credentials(credentials):
+def save_Credentials(credentials):
     """
     Function for saving new credentials input
     """
-    Credentials.save_credentials(credentials)
+    Credentials.save_Credentials(credentials)
 
-def list_credentials(User):
+def list_Credentials(User):
     """
     Function for listing credentials per user
     """
@@ -104,7 +104,7 @@ def run():
                         while True:
                             print(" ")
                             print(
-                                "Select an option: \n 1.>Save your new credentials \n 2.>Show saved credentials \n 3.>Return to main menu"
+                                "Select an option: \n 1.>Save new credentials \n 2.>Show saved credentials \n 3.>Return to main menu"
                             )
                             option = input("Input your option: ").strip()
                             print(" ")
@@ -131,8 +131,8 @@ def run():
                                         break
                                     elif choice == "3":
                                         break
-                                    save_credentials(
-                                    new_credentials(web_name, user_name, password)
+                                    save_Credentials(
+                                    new_Credentials(web_name, user_name, password)
                                 )
                                 print(" ")
                                 print(
@@ -141,12 +141,12 @@ def run():
                                 print(" ")
                             elif option == "2":
                                 print(" ")
-                                if list_credentials(user_name):
+                                if list_Credentials(user_name):
                                     print("Credentials:")
                                     print(" ")
-                                    for credentials in list_credentials(user_name):
+                                    for Credentials in list_Credentials(user_name):
                                         print(
-                                            f"Application/Website: {credentials.web_name} \n User Name: {credentials.user_name} \n Password: {credentials.password}"
+                                            f"Application/Website: {Credentials.web_name} \n User Name: {Credentials.user_name} \n Password: {Credentials.password}"
                                         )
                                     print(" ")
                                 else:
@@ -154,7 +154,7 @@ def run():
                                     "There are no credentials saved under you account. Kindly select option 1 to save current credentials"
                                     )
                                     print(
-                                    "User not found!.Select option 1 to Create a new Account"
+                                    "User not found!.Select option 1 to create new credentials!"
                                 )
         elif choice == "3":
                     print(" ")
